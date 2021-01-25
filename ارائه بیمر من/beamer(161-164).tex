@@ -1,0 +1,374 @@
+\documentclass[9pt]{beamer}
+\usetheme{Berkeley}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\linespread{1.35}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{frame}
+\section*{Construction of a Merger Table}
+\begin{flushright}
+ \texttt{Finite State Machine} \hspace*{1cm} \textbf{161}
+\end{flushright}
+
+\vspace*{0.5cm}
+By this process, the merger table is\\
+
+\vspace*{0.1cm}
+\begin{center}
+\section{picture}
+\includegraphics[width=6cm,height=4cm]{161.png}
+\end{center}
+
+\vspace*{0.1cm}
+\hspace*{0.5cm} The boxes which are not crossed are compatible pairs. So, the compatible pairs are (AB), (AC),
+(AD), (AE), (BC), (BD), (BE), (CD), and (DE).\\
+\end{frame}
+
+\begin{frame}
+\fcolorbox{red}{blue}{\textbf{\textcolor[rgb]{1.00,1.00,1.00}{Example 4.13}}}\hspace*{0.1cm} \texttt{\small{Construct a merger table of the following machine and fi nd the compatible pairs.}} \\
+
+\vspace*{0.1cm}
+\textbf{Solution:}\\
+
+\vspace*{0.1cm}
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+
+\hline
+
+\hline
+
+\hline
+  \multicolumn{5}{c}{{Next State,z}}\\
+ \cline{2-5}
+{Present State} & {$I_1$} & {$I_2$} & {$I_3$} & {$I_4$}\\
+\hline
+$A$ & $C, -$ & $-, -$ &  $-, -$   &  $-, -$\\
+$B$ & $-, -$ & $C, -$ &  $D, -$   &  $E, -$\\
+$C$ & $-, -$ & $F, 0$ &  $B, -$   &  $-, -$\\
+$D$ & $E, -$ & $-, 1$ &  $-, -$   &  $A, -$\\
+$E$ & $-, -$ & $B, -$ &  $-, -$   &  $C, -$\\
+$F$ & $B, -$ & $-, -$ &  $E, -$   &  $-, -$\\
+\hline
+
+\hline
+
+\hline
+
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm} 
+\hspace*{0.5cm} For the states AB, for all the inputs, next states and output do not conflict. So a $\surd$ (tick) is placed in
+the box labelled AB.\\
+\hspace*{0.5cm} For states AC, next states and outputs do not conflict for all the inputs. So a $\surd$ (tick) is placed in the
+box labelled AC.\\
+\end{frame}
+
+\begin{frame}
+
+\hspace*{0.5cm} For states AD, the outputs do not conflict, but the next states for input $I_1$ conflict. So, the conflicting
+next state pair (CE) is placed in the box labelled AD.\\
+\hspace*{0.5cm} In the box labelled (AE), a $\surd$ (tick) is placed.\\
+\hspace*{0.5cm} In the box (AF), the conflicting next state pair (BC) is placed.\\
+\hspace*{0.5cm} In the box (BC), the conflicting next state pairs (CF) and (BD) are placed.\\
+\hspace*{0.5cm} In the box (BD), the conflicting next state pair (AE) is placed.\\
+\hspace*{0.5cm} In the box (BE), the conflicting next state pairs (BC) and (CE) are placed.\\
+\hspace*{0.5cm} In the box (BF), the conflicting next state pair (DE) is placed.\\
+\hspace*{0.5cm} The outputs for $I_2$ for the state (CD) conflict. So a $\times$ is placed in the box (CD).\\
+\hspace*{0.5cm} In the box (CE), the conflicting next state pair (BF) is placed.\\
+\hspace*{0.5cm} In the box (CF), the conflicting next state pair (BE) is placed.\\
+\end{frame}
+
+\begin{frame}
+\section*{Finite Memory and Defi nite Memory Machine}
+ \begin{flushleft}
+    \textbf{162}\hspace*{0.1cm} \textbf{$|$} \hspace*{0.1cm} {\tiny \textbf{Introduction to Automata Theory, Formal Languages and Computation}}
+  \end{flushleft}
+\vspace*{0.4cm}
+
+By this process, the constructed merger table is\\
+
+\vspace*{0.1cm}
+\begin{center}
+\section{picture}
+\includegraphics[width=6cm,height=4cm]{162.png}
+\end{center}
+
+\vspace*{0.1cm}
+\hspace*{0.5cm} The compatible pairs are (AB), (AC), (AD), (AE), (AF), (BC), (BD), (DE), (DF), (CE), (CF), (DE),
+(DF), and (EF).\\
+
+\vspace*{0.5cm}
+\end{frame}
+
+\begin{frame}
+\large{
+\textbf{4.9 Finite Memory and Definite Memory Machine} \\
+}
+
+\vspace*{0.1cm}
+\small{
+If we recall the defi nition of an FSM, it is told that an FSM is a machine whose past histories can affect
+its future behaviour in a fi nite number of ways. It means that the present behaviour of the machine is
+dependent on its past histories. To memorize the past histories, an FSM needs memory elements. The
+amount of past input and corresponding output information is necessary to determine the machine’s
+future behaviour. This is called the memory span of the machine.\\
+\hspace*{0.5cm} Let us assume that a machine is deterministic (for a single state with single input, only one next
+state is produced) and completely specifi ed. For this type of a machine, if the initial state and the
+input sequence are known, one can easily fi nd the output sequence and the corresponding fi nal state.
+One interesting thing is that, this output sequence and the fi nal state are unique. But the reverse is not
+always true. If the fi nal state and the output sequence are known, it is not always possible to determine
+uniquely the input sequence. This section describes the minimum amount of past input–output information
+required to fi nd the future behaviour of the machine and the condition under which the input to the
+machine can be constructed from the output produced.\\
+}
+
+\vspace*{0.4cm}
+\end{frame}
+
+\begin{frame}
+\large{
+\textbf{4.9.1 Finite Memory Machine}\\
+}
+
+\vspace*{0.2cm}
+\small{
+An FSM M is called a finite memory machine of order $\mu$ if $\mu$ is the least integer so that the present state
+of the machine M can be obtained uniquely from the knowledge of last $\mu$ number of inputs and the
+corresponding $\mu$ number of outputs.\\
+\hspace*{0.5cm} There are two methods to find whether a machine is finite or not\\
+}
+
+\vspace*{0.1cm}
+\begin{enumerate}
+  \item Testing table and testing graph for finite memory\\
+  \item Vanishing connection matrix.\\
+\end{enumerate}
+
+\vspace*{0.4cm}
+\large{
+\textbf{4.9.1.1 Testing Table and Testing Graph for Finite Memory Method}\\
+}
+
+\vspace*{0.2cm}
+\small{
+The testing table for finite memory is divided into two halves. The upper half contains a single state
+input–output combination. If, in a machine, there are two types of inputs and two types of outputs, say
+}
+\end{frame}
+
+\begin{frame}
+\section*{Constructing the Method of Connection Matrix}
+\begin{flushright}
+ \texttt{Finite State Machine} \hspace*{1cm} \textbf{163}
+\end{flushright}
+
+\vspace*{0.5cm}
+0 and 1, the input–output combinations are 0/0, 0/1, 1/0, and 1/1. Here, 0/0 means 0 input and 0 outputs,
+that is, for the cases we are getting output 0 for input 0, and 0/1 means 0 input and 1 output, that is, for
+the cases we are getting output 1 for input 0.\\
+\hspace*{0.5cm} The lower half of the table contains all the combinations of the present states taking two into combination.
+For four present states, (say, A, B, C, and D) there are $^{4} C _{2}$, which is six, combinations: AB, AC,
+AD, BC, BD, and CD.\\
+\hspace{0.5cm} The table is constructed according to the machine given.\\
+\hspace{0.5cm} The pair of the present state combination is called the uncertainty pair. And its successor is called
+the implied pair.\\
+
+In the testing graph for fi nite memory,\\
+
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+  \item The number of nodes will be the number of present state combination taking two into account.\\
+  \item There will be a directed arc with a label of input–output combination, from $S_iS_j [i \neq j]$ to $S_pS_q
+[p \neq q]$, if $S_pS_q$ is the implied pair of $S_iS_j$.\\
+\end{enumerate}
+
+\vspace*{0.2cm}
+\hspace{0.5cm} If the testing graph is loop-free, the machine is of finite memory. The order of finiteness is the length
+of the longest path in the testing Graph $(l) + 1$, i.e., $\mu = l + 1$.\\
+
+\vspace*{0.4cm}
+\large{
+\textbf{4.9.1.2 Vanishing Connection Matrix Method}\\
+}
+
+\vspace*{0.2cm}
+\small{
+If the number of states increases, then it becomes diffi cult to fi nd the longest path in the Testing graph
+for fi nite memory. There is an easy method to determine whether a machine is fi nite or not, and if fi nite,
+to fi nd its order of fi niteness. The process is called vanishing connection matrix method.\\
+}
+
+\vspace*{0.4cm}
+\end{frame}
+
+\begin{frame}
+\large{
+\textbf{4.9.2 Constructing the Method of Connection Matrix}\\
+}
+
+\vspace*{0.2cm}
+\small{
+\begin{enumerate}
+  \item The number of rows will be equal to the number of columns ($p \times p$ matrix) .\\
+  \item The rows and columns will be labelled with the pair of the present state combinations. The labels
+associated with the corresponding rows and columns will be identical.\\
+  \item In the matrix, the $(i, j)$ th entry will be 1 if there is an entry in the $(S_aS_b)$ and $(S_pS_q)$ combination in
+the corresponding testing table. Otherwise, the entry will be 0.\\
+\end{enumerate}
+}
+
+\vspace*{0.4cm}
+\end{frame}
+
+\begin{frame}
+\large{
+\textbf{4.9.3 Vanishing of Connection Matrix}\\
+}
+
+\vspace*{0.2cm}
+\small{
+\begin{enumerate}
+  \item Delete all the rows having 0’s in all positions and delete the corresponding columns also.\\
+  \item Repeat this step until one of the following steps is achieved\\
+(a) No row having 0’s in all positions left\\
+(b) The matrix vanishes, which means there are no rows and columns left.\\
+\end{enumerate}
+
+\vspace*{0.2cm}
+\hspace*{0.5cm} If the condition 2(a) arrives, the machine is not of fi nite memory.\\
+\hspace*{0.5cm} If the condition 2(b) arrives, the machine is of fi nite memory and the number of steps required to
+vanish the matrix is the order of finiteness of the machine.\\
+\hspace*{0.5cm} The following examples describe the processes in detail.\\
+
+\vspace*{0.2cm}
+\fcolorbox{red}{blue}{\textbf{\textcolor[rgb]{1.00,1.00,1.00}{Example 3.21}}}\hspace*{0.1cm} \texttt{Test whether the following machine is of fi nite memory or not by using testing
+table–testing graph and vanishing matrix method.}\\
+}
+
+\end{frame}
+
+\begin{frame}
+\section*{Vanishing of Connection Matrix}
+ \begin{flushleft}
+    \textbf{164}\hspace*{0.1cm} \textbf{$|$} \hspace*{0.1cm} {\tiny \textbf{Introduction to Automata Theory, Formal Languages and Computation}}
+  \end{flushleft}
+\vspace*{0.4cm}
+
+\textbf{Solution:}\\
+
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+
+\hline
+
+\hline
+
+\hline
+  \multicolumn{3}{r}{{Next State,z}}\\
+ \cline{2-3}
+{Present State} & {X=0} & {X=1}\\
+\hline
+$A$ & $D, 1$ & $A, 1$ \\
+$B$ & $D, 0$ & $A, 1$ \\
+$C$ & $B, 1$ & $B, 1$ \\
+$D$ & $A, 1$ & $C, 1$ \\
+\hline
+
+\hline
+
+\hline
+
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.2cm}
+\small{
+\begin{itemize}
+  \item Testing Table and Testing Graph for Finite Memory Method: A table which is divided into two
+halves is constructed. The machine has two inputs and two outputs. There are four input–output
+combinations namely 0/0, 0/1, 1/0, and 1/1. The upper half of the machine contains single state
+input–output combination and the lower half contains two state input–output combinations. There
+are four states, and so six combination pairs are made. The testing table becomes\\
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+
+\hline
+
+\hline
+
+\hline
+ 
+Present State & $0/0$ & $0/1$ & $1/0$ & $1/1$ \\
+\hline
+$A$  & $D$ & $-$  & $-$ & $A$\\
+$B$  & $-$ & $D$  & $-$ & $A$\\
+$C$  & $-$ & $B$  & $-$ & $B$\\
+$D$  & $-$ & $A$  & $-$ & $C$\\
+$AB$ & $-$ & $-$  & $-$ & $AA$\\
+$AC$ & $-$ & $-$  & $-$ & $AB$\\
+$AD$ & $-$ & $-$  & $-$ & $AC$\\
+$BC$ & $-$ & $BD$ & $-$ & $AB$\\
+$BD$ & $-$ & $AD$ & $-$ & $AC$\\
+$CD$ & $-$ & $AB$ & $-$ & $BC$\\
+\hline
+
+\hline
+
+\hline
+
+\hline
+\end{tabular}
+\end{center}
+
+\vspace*{0.3cm}
+\end{frame}
+
+\begin{frame}
+\small{
+\begin{multicols}{2}
+In the testing table, there are six present states combinations. So, in the testing table there are six
+nodes. There is a directed arc with a label of
+input–output combination, from $S_iS_j [i \neq j]$ to $S_pS_q
+[p \neq q]$, if $S_pS_q$ is the implied pair of $S_iS_j$. The testing
+graph for fi nite memory is given in Fig. 4.20.\\
+\hspace*{0.5cm} (There will be no arc from AB to AA as AA, is
+the repetition of same state 'A'.)\\
+\hspace{0.5cm} The testing graph is loop-free. The longest
+path in the testing graph is $5 (CD \rightarrow C BC \rightarrow C BD
+\rightarrow C AD \rightarrow C AC \rightarrow C AB)$, and so the order of defi niteness
+$\mu = 5 + 1 = 6.$\\
+\begin{itemize}
+  \item \textbf{Vanishing Connection Matrix Method:} According
+to the rule of the construction of the connection
+matrix, a table is constructed with six rows
+and six columns labelled with the present state\\
+
+\section{picture}
+\includegraphics[width=5cm,height=4cm]{164.png}
+
+\end{itemize}
+\end{multicols}
+}
+\end{frame}
+\end{document}
