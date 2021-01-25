@@ -33,7 +33,7 @@
 
 ## فرم های ارزیابی عمومی فعالیت مشترک همه دانشجویان
 - [ارزیابی رزومه و انگیزه نامه](https://github.com/erfanata/PNU_3991_AR/blob/main/%D9%81%D8%B1%D9%85%20%D9%87%D8%A7%DB%8C%20%D8%A7%D8%B1%D8%B2%DB%8C%D8%A7%D8%A8%DB%8C%20%D9%85%D9%86/%D8%B9%D9%85%D9%88%D9%85%DB%8C%201.pdf)
-- [خلاصه ارزیابی بخش عمومی](https://github.com/mrezabasiri/pnu99taklif/blob/main/%D8%A7%D8%B1%D8%B2%DB%8C%D8%A7%D8%A8%DB%8C%20%D8%A8%D8%AE%D8%B4%20%D8%B9%D9%85%D9%88%D9%85%DB%8C/%D8%B9%D9%85%D9%88%D9%85%DB%8C%202.pdf)
+- [خلاصه ارزیابی بخش عمومی](https://github.com/erfanata/PNU_3991_AR/blob/main/%D9%81%D8%B1%D9%85%20%D9%87%D8%A7%DB%8C%20%D8%A7%D8%B1%D8%B2%DB%8C%D8%A7%D8%A8%DB%8C%20%D9%85%D9%86/%D8%B9%D9%85%D9%88%D9%85%DB%8C%202.pdf)
 
 ## فرم ارزیابی درس کارشناسی نظریه زبان
 - [فایل ارزیابی من](https://github.com/erfanata/PNU_3991_AR/blob/main/%D9%81%D8%B1%D9%85%20%D9%87%D8%A7%DB%8C%20%D8%A7%D8%B1%D8%B2%DB%8C%D8%A7%D8%A8%DB%8C%20%D9%85%D9%86/%D8%AA%D8%AE%D8%B5%D8%B5%DB%8C.pdf)
