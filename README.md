@@ -63,8 +63,8 @@
    <summary>فایل های بیمر من ، استاد فقط ببخشید من به خاطر کد نوشتن غیر منظم فایل ارائه من صفحه اولش که شامل اطلاعات تایپ شده هست در آخر اسلاید قرار گرفته، به بزرگی خودتون ببخشید.</summary> 
     
   > ##   ارائه لاتکس من با قالب بیمر صفحات 45 و 46 کتاب مرفی شده برای تایپ  
-  - [Power(45.46).latex](https://github.com/mrezabasiri/pnu99taklif/blob/main/beamer%20man/beamer.tex)
-  - [Power(45.46).pdf](https://github.com/mrezabasiri/pnu99taklif/blob/main/beamer%20man/beamer.pdf)
+  - [Power(161.164).latex](https://github.com/erfanata/PNU_3991_AR/blob/main/%D8%A7%D8%B1%D8%A7%D8%A6%D9%87%20%D8%A8%DB%8C%D9%85%D8%B1%20%D9%85%D9%86/beamer(161-164).tex)
+  - [Power(161.164).pdf](https://github.com/mrezabasiri/pnu99taklif/blob/main/beamer%20man/beamer.pdf)
   
   [<kbd>↩</kbd>](#TOC)
 </details>
