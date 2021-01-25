@@ -52,7 +52,7 @@
   
 > ## لاتک
 - [لاتک از صفحات 45 الی 48](https://github.com/mrezabasiri/pnu99taklif/blob/main/5448man.tex)
-- [فایل pdf](https://github.com/mrezabasiri/pnu99taklif/blob/main/5448man.pdf)
+- [فایل pdf](https://github.com/erfanata/PNU_3991_AR/blob/main/%D8%AA%D8%A7%DB%8C%D9%BE%20%D9%84%D8%A7%D8%AA%DA%A9%D8%B3%20%D9%85%D9%86/%D8%B5%D9%81%D8%AD%D8%A7%D8%AA%20161%20%D8%A7%D9%84%DB%8C%20164.pdf)
 
 [<kbd>↩</kbd>](#TOC)
 </details>
