@@ -14,7 +14,7 @@
 # پروژه و کارهای کلاسی درس نظریه زبان و ماشین💼📐📏
 
 ## کارهای میان ترم✏
-- [حساب گیت هاب من](https://github.com/mrezabasiri)
+- [حساب گیت هاب من](https://github.com/erfanata)
 - [PNU_3991_AR](https://github.com/mrezabasiri/pnu99taklif)
 - [فرم رزومه و سوابق کاری من](https://mrezabasiri.github.io/barayeman/) 
 - [فرم انگیزه نامه من](https://github.com/mrezabasiri/mysopbasiri/blob/main/my%20sop.pdf)
