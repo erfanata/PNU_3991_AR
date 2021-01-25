@@ -15,7 +15,7 @@
 
 ## کارهای میان ترم✏
 - [حساب گیت هاب من](https://github.com/erfanata)
-- [PNU_3991_AR](https://github.com/mrezabasiri/pnu99taklif)
+- [PNU_3991_AR](https://github.com/erfanata/PNU_3991_AR)
 - [فرم رزومه و سوابق کاری من](https://mrezabasiri.github.io/barayeman/) 
 - [فرم انگیزه نامه من](https://github.com/mrezabasiri/mysopbasiri/blob/main/my%20sop.pdf)
 - [مدرک جاوا اسکریپ من](https://www.sololearn.com/Certificate/1024-18439174/pdf/)
